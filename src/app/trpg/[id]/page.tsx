@@ -276,10 +276,6 @@ export default function TrpgDetailPage() {
   // 한 번 크게 잡히면 영영 줄지 않는다. 아래 injectAfterDoctype가 doctype 바로 뒤에 끼워 넣는다.
   // <meta charset>도 함께 주입 — decodeLogText가 이미 문자열로 만들었으므로 Blob은 언제나 UTF-8이다.
   // 원본 문서의 charset 선언(euc-kr 등)이 뒤에 남아 있어도 먼저 온 선언이 이긴다
-  const inject = `<meta charset="utf-8">
-  <link rel="stylesheet" href="${window.location.origin}/roll20/app.css">
-  <link rel="stylesheet" href="${window.location.origin}/roll20/roll20_style.min.css">
-  <script>
 // 널 오리진에서 localStorage 접근이 예외를 던져 로그 스크립트가 죽는 것 방지 (무동작 심)
 try{void window.localStorage}catch(e){var __m={getItem:function(){return null},setItem:function(){},removeItem:function(){},clear:function(){},key:function(){return null},length:0};
 try{Object.defineProperty(window,'localStorage',{value:__m});Object.defineProperty(window,'sessionStorage',{value:__m});}catch(e2){}}
